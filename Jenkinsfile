@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'node:latest'
-            args '-p 3000:3000 --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client  --env DOCKER_TLS_VERIFY=1'
+            image 'node:6-alpine'
+            args '-p 3000:3000'
         }
     }
     environment {
